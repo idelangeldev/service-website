@@ -1,0 +1,248 @@
+// TOP HEADER STYLING
+.top {
+  &__header {
+    background-color: $color-primary;
+  }
+
+  &__container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 1rem 3.2rem;
+
+    @media only screen and (max-width: $bp-super) {
+      max-width: 120rem;
+    }
+  }
+}
+
+.top-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: $bp-phone-su) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    &:last-child {
+      @media only screen and (max-width: $bp-tab-sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    color: $color-secondary;
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-grey-light-4;
+    font-size: 1.4rem;
+    transition: all 0.4s;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: $color-secondary;
+  }
+}
+
+// MAIN HEADER AND NAV STYLING
+.header {
+  background-color: $color-primary;
+  height: 8.7rem;
+  position: relative;
+}
+
+// STICKY NAVIGATION
+.sticky {
+  & .header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba($color-primary, 0.97);
+    z-index: 999;
+    box-shadow: 0 1.2rem 3.2rem rgba($color-black, 0.03);
+  }
+
+  & .nav-container {
+    max-width: 120rem;
+  }
+}
+// STICKY NAVIGATION ENDS
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 130rem;
+  padding: 1rem 3.2rem;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $bp-super) {
+    max-width: 120rem;
+  }
+
+  @media only screen and (max-width: $bp-phone-su) {
+    padding: 1rem 1.9rem;
+  }
+
+  &__logo {
+    height: 6.5rem;
+  }
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    gap: 3.2rem;
+  }
+  @media only screen and (max-width: $bp-large) {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 3rem;
+    }
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: $color-secondary;
+  }
+
+  &__link.nav__cta:link,
+  &__link.nav__cta:visited {
+    padding: 1.4rem 2.8rem;
+    border-radius: 9px;
+    color: $color-primary-dark-3;
+    background-color: $color-secondary;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 3rem;
+    }
+  }
+
+  &__link.nav__cta:hover,
+  &__link.nav__cta:active {
+    background-color: $color-secondary-light-1;
+  }
+}
+
+.main-nav {
+  @media only screen and (max-width: $bp-large) {
+    background-color: rgba(0, 46, 91, 0.97);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    z-index: 2;
+
+    // Hide Navigation
+    // 1) Hide it visiually
+    opacity: 0;
+
+    // 2) Make it unaccessible to mouse and keyboard
+    pointer-events: none;
+
+    // 3) Hide it from screen readers
+    visibility: hidden;
+  }
+}
+
+.nav-open {
+  & .main-nav {
+    @media only screen and (max-width: $bp-large) {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  & .mobile-nav__icon[name="close-outline"] {
+    @media only screen and (max-width: $bp-large) {
+      display: block;
+    }
+  }
+  & .mobile-nav__icon[name="menu-outline"] {
+    @media only screen and (max-width: $bp-large) {
+      display: none;
+    }
+  }
+}
+
+// MOBILE NAV
+.mobile-nav {
+  &__btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+
+    @media only screen and (max-width: $bp-large) {
+      display: block;
+      z-index: 9999;
+    }
+  }
+
+  &__icon {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: $color-white;
+
+    @media only screen and (max-width: $bp-tab-sm) {
+      height: 4.2rem;
+      width: 4.2rem;
+    }
+  }
+
+  &__icon[name="close-outline"] {
+    display: none;
+  }
+}

@@ -1,0 +1,126 @@
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font Sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+- Font Weights:
+Defaul: 400
+Medium: 500
+Semi-Bold: 600
+Bold: 700
+
+
+- Line heights:
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+-Letter-spacing
+-0.5px
+0.75px
+
+
+- Spacing System (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+// COLOR VARIABLES
+$color-primary: #002e5b;
+
+$color-primary-dark: #002242; // dark background
+$color-primary-dark-2: #002952; // hover color for pricing tabs
+$color-primary-dark-3: #00296b; // btn-text-clr-hover
+
+$color-secondary: #f7c02e;
+$color-secondary-dark: #91721c; // small-yellow-text
+$color-secondary-dark-2: #876919; // small yellow text for better contrast
+
+$color-secondary-light-1: #f6d136; // btn and link color
+$color-secondary-light-2: #f9cd58; // icon-bg
+$color-secondary-light-3: #ffca37; // plan name
+
+$color-grey-light-1: #fef9ea; // form background
+$color-grey-light-2: #eee; // form background
+$color-grey-light-3: #e4f0ff; //third shade of blue for pricing
+$color-grey-light-4: #ddd; // color for top nav links
+$color-grey-light-5: #ccd5de; // color for big text and such
+$color-grey-light-6: #ccc; // footer color
+
+$color-grey-dark-1: #1a436b; // color for services title
+$color-grey-dark-2: #33587c; // pricing color background three
+$color-grey-dark-3: #365284; // default text color
+
+$color-black: #000;
+$color-white: #fff;
+
+//FONT VARIABLE
+$font-primary: "Rubik", sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-super: 84em; // 1344px
+$bp-largest: 75em; // 1200px
+$bp-large: 59em; // 944px
+$bp-tab: 49em; // 784px Tablets
+$bp-tab-sm: 45em; // 720px Small Tablets
+$bp-phone-su: 34em; // 544px Bigger Phones
+$bp-phone-md: 27em; // 416px iphones
+$bp-phone-sm: 24em; //384px most phones
+$bp-phone-xs: 21em; // Iphone 5, 5c
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px /16px = 62.5% -> 1rem = 10px
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 56.25%;
+  }
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-grey-dark-3;
+  font-weight: 400;
+  line-height: 1;
+
+  // overflow-x: hidden;
+}
+
+.body-wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container {
+  /*some other websites use 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.privacy-container {
+  /*some other websites use 1140px */
+  max-width: 80rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba($color-secondary, 0.5);
+}

@@ -1,0 +1,94 @@
+.section-hero {
+  background-color: $color-primary-dark;
+  padding: 9.6rem 0;
+
+  @media only screen and (max-width: $bp-phone-su) {
+    padding: 6.4rem 0;
+  }
+}
+
+// STICKY NAVIGATION addition
+.sticky {
+  & .section-hero {
+    margin-top: 8.7rem;
+  }
+}
+// STICKY NAVIGATION addition ends
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-super) {
+    max-width: 120rem;
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    gap: 4.8rem;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+
+  @media only screen and (max-width: $bp-phone-su) {
+    padding: 0 3.2rem;
+  }
+
+  &__text-box,
+  &__img-box {
+    @media only screen and (max-width: $bp-large) {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    color: $color-grey-light-2;
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+
+    @media only screen and (max-width: $bp-large) {
+      margin-bottom: 4.3rem;
+    }
+  }
+
+  &__no-see-box {
+    display: flex;
+    align-items: center;
+    margin-top: 8rem;
+
+    @media only screen and (max-width: $bp-large) {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    opacity: 0;
+  }
+
+  &__img {
+    width: 100%;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 60%;
+    }
+
+    @media only screen and (max-width: $bp-phone-su) {
+      width: 80%;
+    }
+
+    @media only screen and (max-width: $bp-phone-md) {
+      width: 90%;
+    }
+  }
+}

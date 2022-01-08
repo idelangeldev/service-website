@@ -1,0 +1,176 @@
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.pricing {
+  &__tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    border-bottom: 3px solid $color-primary;
+    margin-bottom: 4.8rem;
+  }
+
+  &__tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border-left: 3px solid $color-grey-light-5;
+    border-top: 3px solid $color-grey-light-5;
+    border-right: 3px solid $color-grey-light-5;
+    border-radius: 11px 11px 0 0;
+    overflow: hidden;
+    transition: all 0.4s;
+
+    &.activeTab {
+      background-color: $color-primary;
+      color: $color-white;
+      border-left: 3px solid $color-primary;
+      border-top: 3px solid $color-primary;
+      border-right: 3px solid $color-primary;
+    }
+
+    &:hover {
+      background-color: $color-primary-dark-2;
+      color: $color-white;
+      border-left: 3px solid $color-primary-dark-2;
+      border-top: 3px solid $color-primary-dark-2;
+      border-right: 3px solid $color-primary-dark-2;
+    }
+  }
+
+  &__icon {
+    display: block;
+    color: $color-secondary;
+    font-size: 3.6rem;
+    padding: 1.6rem 0 0.8rem;
+  }
+
+  &__type {
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.8rem 0 1.6rem;
+
+    @media only screen and (max-width: $bp-tab-sm) {
+      font-size: 2.25rem;
+    }
+
+    @media only screen and (max-width: $bp-phone-su) {
+      line-height: 1.5;
+    }
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.8rem;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: repeat(auto-fit, minmax(33.5rem, 1fr));
+    }
+
+    @media only screen and (max-width: $bp-tab-sm) {
+      grid-template-columns: repeat(auto-fit, minmax(25.5rem, 1fr));
+    }
+
+    @media only screen and (max-width: $bp-phone-su) {
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    }
+  }
+
+  &__detail {
+    border-radius: 11px;
+
+    &--one {
+      border: 2px solid $color-grey-light-5;
+      padding: 2.8rem 2.5rem;
+    }
+
+    &--two {
+      background-color: $color-grey-light-3;
+      padding: 3rem 2.7rem;
+    }
+
+    &--three {
+      background-color: $color-grey-dark-2;
+      padding: 3rem 2.7rem;
+    }
+
+    &--four {
+      background-color: $color-primary;
+      padding: 3rem 2.7rem;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 4.8rem;
+  }
+
+  &__name {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 3.2rem;
+
+    &--one {
+      color: $color-secondary-dark;
+    }
+
+    &--two {
+      color: $color-secondary-dark-2;
+    }
+
+    &--three {
+      color: $color-secondary-light-3;
+    }
+
+    &--four {
+      color: $color-secondary;
+    }
+  }
+
+  &__price {
+    font-size: 6.2rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+
+    span {
+      font-size: 3rem;
+      font-weight: 500;
+      margin-right: 0.8rem;
+    }
+
+    &--white {
+      color: $color-white;
+    }
+  }
+
+  &__aside {
+    font-size: 1.6rem;
+    line-height: 1.6;
+
+    @media only screen and (max-width: $bp-tab-sm) {
+      font-size: 1.7rem;
+    }
+
+    & span {
+      color: $color-secondary-dark;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.activeTab[data-tab-content] {
+  display: block;
+  transition: all 0.4s;
+}

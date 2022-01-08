@@ -1,0 +1,79 @@
+.section-services {
+  padding: 9.6rem 0;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 8.55rem 0;
+  }
+}
+
+.service {
+  box-shadow: 0 2.4rem 4.8rem rgba($color-black, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+
+  &:hover {
+    transform: translateY(-1.2rem);
+    box-shadow: 0 3.2rem 6.4rem rgba($color-black, 0.06);
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__content {
+    padding: 3.2rem 2.5rem 4.8rem;
+
+    @media only screen and (max-width: $bp-large) {
+      padding: 3.2rem 4rem 4.8rem;
+    }
+
+    @media only screen and (max-width: $bp-tab-sm) {
+      padding: 3.2rem 2.48rem 4.8rem;
+    }
+
+    @media only screen and (max-width: $bp-phone-su) {
+      padding: 3.2rem 2.8rem 4.8rem;
+    }
+  }
+
+  &__title {
+    color: $color-grey-dark-1;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+
+    @media only screen and (max-width: $bp-tab-sm) {
+      font-size: 2.33rem;
+    }
+  }
+
+  &__attributes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__attribute {
+    font-size: 1.8rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1.6rem;
+
+    @media only screen and (max-width: $bp-tab-sm) {
+      font-size: 1.77rem;
+    }
+
+    & span {
+      line-height: 1.6;
+    }
+  }
+
+  &__icon {
+    font-size: 3rem;
+    color: $color-secondary;
+  }
+}

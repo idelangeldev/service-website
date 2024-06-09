@@ -1,6 +1,6 @@
 # Cleaning Service Website
 
-This is a website made for my dad's cleaning business: [Servicio Del Angel](https://www.serviciodelangel.com/).
+This is a website made for my dad's cleaning business: [Servicio Del Angel](https://serviciodelangel.netlify.app/).
 
 ## Table of contents
 
@@ -22,7 +22,7 @@ This is a website made for my dad's cleaning business: [Servicio Del Angel](http
 
 ### Links
 
-- Live Site URL: [https://www.serviciodelangel.com/](https://www.serviciodelangel.com/)
+- Live Site URL: [ServicioDelAngel/](https://serviciodelangel.netlify.app)
 
 ## My process
 
